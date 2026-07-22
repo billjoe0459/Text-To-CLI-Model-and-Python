@@ -9,3 +9,6 @@ This project was initally prepaired and developed on a Jetson Orin Nano, future 
 The based model used for this project is the Qwen/Qwen2.5-Coder-1.5B-Instruct pulled from huggingface.
 
 The dataset used to initally train the model was aelhalili/bash-commands-dataset.
+
+<h3>RELEASE NOTES:</h3> <br>
+v1: trained qlora gguf of the model (you will need the preconfigued model file to download both the base model and cli model for use in ollama), only text to command works, future versions will include both a full gguf and python ssh support.
