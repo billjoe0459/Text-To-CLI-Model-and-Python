@@ -1,3 +1,6 @@
+# ###
+# THIS DOCUMENT ISN'T COMPLETE, PLEASE DON'T RELY ON THIS DOCUMENT FOR INFORMATION.
+# ###
 ---
 base_model: Qwen/Qwen2.5-Coder-1.5B-Instruct
 library_name: peft
@@ -6,7 +9,7 @@ library_name: peft
 # Model Card for Model ID
 
 <!-- Provide a quick summary of what the model is/does. -->
-
+This Model allows users to type in a description of a linux cli task which the model will convert into a real command.
 
 
 ## Model Details
@@ -14,16 +17,16 @@ library_name: peft
 ### Model Description
 
 <!-- Provide a longer summary of what this model is. -->
+This Model allows users to type in a description of a linux cli task which the model will convert into a real command. 
+This Model was intended to return command output for basic requests that can be fulfilled in a single line.
 
-
-
-- **Developed by:** [More Information Needed]
+- **Developed by:** Yakov Bogorad
 - **Funded by [optional]:** [More Information Needed]
 - **Shared by [optional]:** [More Information Needed]
 - **Model type:** [More Information Needed]
-- **Language(s) (NLP):** [More Information Needed]
+- **Language(s) (NLP):** English + Debian CLI
 - **License:** [More Information Needed]
-- **Finetuned from model [optional]:** [More Information Needed]
+- **Finetuned from model [optional]:** Qwen/Qwen2.5-Coder-1.5B-Instruct
 
 ### Model Sources [optional]
 
@@ -58,8 +61,7 @@ library_name: peft
 ## Bias, Risks, and Limitations
 
 <!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-[More Information Needed]
+This Model is very limited and only intended for single command outputs and simple tasks, you should never rely on this model for complex linux workflows or sensitive projects.
 
 ### Recommendations
 
