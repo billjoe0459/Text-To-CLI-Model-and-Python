@@ -12,3 +12,5 @@ The dataset used to initally train the model was aelhalili/bash-commands-dataset
 
 <h3>RELEASE NOTES:</h3> <br>
 v1: trained qlora gguf of the model (you will need the preconfigued model file to download both the base model and cli model for use in ollama), only text to command works, future versions will include both a full gguf and python ssh support.
+
+v2: created fp16 and Q4_K_M gguf files 
