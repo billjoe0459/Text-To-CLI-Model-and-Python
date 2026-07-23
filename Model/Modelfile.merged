@@ -1,0 +1,25 @@
+# Modelfile.merged
+# Self-contained single-file Qwen CLI model (Q4_K_M quantized)
+# Adapter deltas baked into full weights, then quantized to ~1 GB
+#
+# Usage:
+#   ollama create cli-merged -f Modelfile.merged
+#   ollama run cli-merged
+
+FROM ./qwen2.5-cli-q4_k_m.gguf
+
+# Must match the SYSTEM_PROMPT used in train.py
+SYSTEM """You are a helpful assistant that converts natural language requests into a single shell command. Respond with only the raw command as plain text. Do not use markdown, code fences, backticks, or language labels like 'bash' or 'sh'. Do not add any explanation before or after the command."""
+
+# qwen2.5-coder:1.5b-instruct already ships with a correct ChatML
+# TEMPLATE baked into its Ollama manifest. No override needed.
+
+# Output is a single command line -- keep it short and deterministic.
+PARAMETER num_predict 64
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+
+# Safety net: cut generation at fence marker
+PARAMETER stop "```"
