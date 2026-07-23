@@ -11,7 +11,7 @@ The based model used for this project is the Qwen/Qwen2.5-Coder-1.5B-Instruct pu
 The dataset used to initally train the model was aelhalili/bash-commands-dataset.
 
 <br>
-## Ollama and Model Installation Guide - this tutorial is for debian style distros of linux:
+<h3> Ollama and Model Installation Guide - this tutorial is for debian style distros of linux: </h3>
 
 1. Download the unmerged gguf file - [Model/Unmerged/qwen2.5-cli-1.5b.gguf](https://github.com/billjoe0459/Text-To-CLI-Model-and-Python/blob/main/Model/Unmerged/qwen2.5-cli-1.5b.gguf)
 2. Download the Modelfile - [Model/Unmerged/Modelfile](https://github.com/billjoe0459/Text-To-CLI-Model-and-Python/blob/main/Model/Unmerged/Modelfile)
