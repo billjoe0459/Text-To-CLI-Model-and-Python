@@ -23,7 +23,7 @@ The dataset used to initally train the model was aelhalili/bash-commands-dataset
 6. Install Ollama, run this in the ssh terminal - curl -fsSL https://ollama.com/install.sh | sh
 7. Run the command and wait for install - ollama create cli-assistant -f Modelfile
 8. Run the command - ollama run cli-assistant
-9. Now you have the model, please have fun and be creative!
+9. Now you have the model, please have fun and be creative! <br> Here is a demo video: (https://youtu.be/edBHgl2VJtY)
 <br>
 
 <h3>RELEASE NOTES:</h3> <br>
