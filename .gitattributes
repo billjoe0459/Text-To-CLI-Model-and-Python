@@ -1,0 +1,4 @@
+README.md filter=lfs diff=lfs merge=lfs -text
+Training filter=lfs diff=lfs merge=lfs -text
+gitsshkey.key.pub filter=lfs diff=lfs merge=lfs -text
+Model filter=lfs diff=lfs merge=lfs -text
