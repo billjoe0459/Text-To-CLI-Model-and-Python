@@ -1,0 +1,6 @@
+# Exclude all GGUF models
+Model/
+*.gguf
+
+# Exclude the SSH key
+gitsshkey.key.pub
