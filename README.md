@@ -6,10 +6,10 @@ This project is powered by Python and Ollama \\add further notes here, python li
 This project was initally prepaired and developed on a Jetson Orin Nano, future plans include extended training on an RTX 4070.  
 <br>
 
-The based model used for this project is the Qwen/Qwen2.5-Coder-1.5B-Instruct pulled from huggingface. 
+The based model used for this project is the Qwen/Qwen2.5-Coder-1.5B-Instruct pulled from huggingface. <br>
 (https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct)
 
-The dataset used to initally train the model was aelhalili/bash-commands-dataset. 
+The dataset used to initally train the model was aelhalili/bash-commands-dataset. <br>
 (https://huggingface.co/datasets/aelhalili/bash-commands-dataset)
 
 <br>
