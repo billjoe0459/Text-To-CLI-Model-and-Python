@@ -1,5 +1,0 @@
-./Model/qwen2.5-cli-fp16.gguf
-./Model/qwen2.5-cli-q4_k_m.gguf
-./gitsshkey.key.pub
-./Model/*.gguf
-
