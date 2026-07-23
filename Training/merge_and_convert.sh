@@ -13,8 +13,8 @@ set -e
 BASE_MODEL_ID="Qwen/Qwen2.5-Coder-1.5B-Instruct"
 ADAPTER_DIR="./qwen-cli-lora"
 MERGED_DIR="./merged_model"
-F16_GGUF="qwen-cli-merged-f16.gguf"
-Q4_GGUF="qwen-cli-merged-q4.gguf"
+F16_GGUF="qwen2.5-cli-fp16.gguf"
+Q4_GGUF="qwen2.5-cli-q4_k_m.gguf"
 LLAMA_CPP="./llama.cpp"
 
 # ── Step 0: Check prerequisites ─────────────────────────────────────────────
