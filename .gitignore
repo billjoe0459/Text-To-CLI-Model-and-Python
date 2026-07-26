@@ -1,0 +1,3 @@
+.gitignore
+.gitattributes
+./Model/Unsloth_gguf/qwen2.5-cli-1.5b-q4_k_m.gguf
