@@ -1,0 +1,40 @@
+# Ollama Modelfile for the CLI-command LoRA fine-tune
+#
+# Usage (run from the directory containing this Modelfile and the
+# qwen2.5-cli-1.5b.gguf adapter produced by convert_adapter_to_gguf.sh):
+#
+#   ollama create cli-assistant -f Modelfile
+#   ollama run cli-assistant
+#
+# This pulls the official qwen2.5-coder:1.5b-instruct base from the
+# Ollama library (same base model the LoRA adapter was trained
+# against) and layers your fine-tuned adapter on top of it at load
+# time -- no merging or re-quantizing of the full model needed.
+
+FROM qwen2.5-coder:1.5b-instruct
+
+ADAPTER ./qwen2.5-cli-1.5b.gguf
+
+# Must match the SYSTEM_PROMPT used in train.py, or the model
+# is being run under a different framing than it was fine-tuned on.
+SYSTEM """You are a helpful assistant that converts natural language requests into a single shell command. Respond with only the raw command as plain text. Do not use markdown, code fences, backticks, or language labels like 'bash' or 'sh'. Do not add any explanation before or after the command."""
+
+# qwen2.5-coder:1.5b-instruct already ships with a correct ChatML
+# TEMPLATE baked into its Ollama manifest (system/user/assistant
+# turns wrapped in <|im_start|>/<|im_end|>), which is the same
+# template train.py rendered training examples with via
+# tokenizer.apply_chat_template(). No TEMPLATE override needed here
+# -- redeclaring it would risk drifting from what Ollama already has
+# right for this base model.
+
+# Output is a single command line -- keep it short and deterministic.
+PARAMETER num_predict 64
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+
+# Safety net: if the model still opens with a fenced code block
+# despite the system prompt, cut generation right at the fence
+# marker rather than letting a "```bash" wrapper through.
+PARAMETER stop "```"
