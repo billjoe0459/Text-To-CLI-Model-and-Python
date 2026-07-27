@@ -3,7 +3,7 @@
 # Usage (run from the directory containing this Modelfile and the
 # qwen2.5-cli-1.5b.gguf adapter produced by convert_adapter_to_gguf.sh):
 #
-#   ollama create cli-assistant -f Modelfile
+#   ollama create cli-assistant -f Modelfile.unmerged
 #   ollama run cli-assistant
 #
 # This pulls the official qwen2.5-coder:1.5b-instruct base from the
