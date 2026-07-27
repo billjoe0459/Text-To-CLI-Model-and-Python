@@ -3,15 +3,15 @@
 # Usage (run from the directory containing this Modelfile and the
 # qwen2.5-cli-1.5b.gguf adapter produced by convert_adapter_to_gguf.sh):
 #
-#   ollama create cli-assistant -f Modelfile.unslothed
-#   ollama run cli-assistant
+#   ollama create qwen2.5-cli:1.5b-q4_K_M -f Modelfile.unslothed
+#   ollama run qwen2.5-cli:1.5b-q4_K_M
 #
 # This pulls the official qwen2.5-coder:1.5b-instruct base from the
 # Ollama library (same base model the LoRA adapter was trained
 # against) and layers your fine-tuned adapter on top of it at load
 # time -- no merging or re-quantizing of the full model needed.
 
-FROM qwen2.5-coder:1.5b-instruct
+FROM qwen2.5-coder:1.5b-instruct-q4_K_M
 
 ADAPTER ./qwen2.5-cli-unmerged.gguf
 
